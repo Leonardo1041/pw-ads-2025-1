@@ -3,7 +3,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default function MainMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -64,6 +64,14 @@ export default function MainMenu() {
           to="/customers/new"
         >
           Cadastro de clientes
+        </MenuItem>
+
+        <MenuItem 
+          onClick={handleClose}
+          component={Link}
+          to="/prova"
+        >
+          Sobre o projeto
         </MenuItem>
 
       </Menu>

@@ -22,7 +22,7 @@ export default function Prova() {
 
   return (
     <>
-      <Typography variant="h1" gutterBottom>
+      <Typography variant="h1">
         Sobre o projeto Karangos
       </Typography>
 

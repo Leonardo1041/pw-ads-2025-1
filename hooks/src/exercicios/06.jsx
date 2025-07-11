@@ -12,17 +12,17 @@ function PokemonInfo({pokemonName}) {
   // const [error, setError] = React.useState(null)
   // const [status, setStatus] = React.useState('IDLE')
 
-  // Uma unica variavel de estado de objeto para substituir os três
-  // variaveis de estado "avulsas" anteriores
-  const [ state, setState] = React.useState({
+  // Uma única variável de estado de objeto para substituir as três
+  // variáveis de estado "avulsas" anteriores
+  const [state, setState] = React.useState({
     pokemon: null,
     error: null,
     status: 'IDLE'
   })
 
-  // Para diminuir a quantidade de alterações necessarias no codigo
-  // já existente, podemos desestruturar a variavel de estado "state"
-  // em variaveis individuais somente leitura
+  // Para diminuir a quantidade de alterações necessárias no código
+  // já existente, podemos desestruturar a variável de estado "state"
+  // em variáveis individuais somente leitura
   const {
     pokemon,
     error,
@@ -57,11 +57,11 @@ function PokemonInfo({pokemonName}) {
     fetchPokemon(pokemonName)
       .then(    // requisição bem-sucedida
         pokemonData => {
-          // pokemon(pokemonData)
+          // setPokemon(pokemonData)
           // setStatus('RESOLVED')
-          // ...state tira uma copia da variavel de estado com seus valores
-          // correntes antes de atualizar apenas os campos "pokemon" e "status"q
-          setState({ ...state, pokemon: pokemonData, status: 'RESOLVED'})
+          // ...state tira uma cópia da variável de estado com seus valores
+          // correntes antes de atualizar apenas os campos "pokemon" e "status"
+          setState({ ...state, pokemon: pokemonData, status: 'RESOLVED' })
         }
       )
       .catch(   // requisições com falha
@@ -69,7 +69,7 @@ function PokemonInfo({pokemonName}) {
           // setError(error)
           // setStatus('ERROR')
           // "error" é uma propriedade abreviada (equivalente a "error: error")
-          setState({ ...state, error, status: 'ERROR'})
+          setState({ ...state, error, status: 'ERROR' })
         }
       )
   }, [pokemonName])

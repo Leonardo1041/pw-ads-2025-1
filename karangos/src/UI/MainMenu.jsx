@@ -3,7 +3,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export default function MainMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -62,7 +62,6 @@ export default function MainMenu() {
           onClick={handleClose}
           component={Link}
           to="/customers/new"
-          divider
         >
           Cadastro de clientes
         </MenuItem>
@@ -82,11 +81,11 @@ export default function MainMenu() {
         >
           Cadastro de veículos
         </MenuItem>
-        
+
         <MenuItem 
           onClick={handleClose}
           component={Link}
-          to="/prova"
+          to="/about"
         >
           Sobre
         </MenuItem>
@@ -94,7 +93,7 @@ export default function MainMenu() {
         <MenuItem 
           onClick={handleClose}
           component={Link}
-          to="/about"
+          to="/sobre"
         >
           Sobre
         </MenuItem>
